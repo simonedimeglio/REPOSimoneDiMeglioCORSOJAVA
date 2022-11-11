@@ -6,3 +6,4 @@ REPOSimoneDiMeglioCORSOJAVA
 11/11/22  ---> Caricato Primo Esercizio in repo - Simone Di Meglio <br />
 11/11/22  ---> Caricato Primo Esercizio su IF - Simone Di Meglio <br />
 11/11/22  ---> Caricato Primo Esercizio su Scanner - Simone Di Meglio <br />
+11/11/22  ---> Caricato Esercizio su Scanner ed If annidati - Simone Di Meglio <br />
