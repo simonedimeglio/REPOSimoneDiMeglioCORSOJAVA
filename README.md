@@ -7,3 +7,4 @@ REPOSimoneDiMeglioCORSOJAVA
 11/11/22  ---> Caricato Primo Esercizio su IF - Simone Di Meglio <br />
 11/11/22  ---> Caricato Primo Esercizio su Scanner - Simone Di Meglio <br />
 11/11/22  ---> Caricato Esercizio su Scanner ed If annidati - Simone Di Meglio <br />
+14/11/22  ---> Caricato Primo Esercizio di esempio su WHILE e DO WHILE - Simone Di Meglio <br />
