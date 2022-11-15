@@ -10,3 +10,4 @@ REPOSimoneDiMeglioCORSOJAVA
 14/11/22  ---> Caricato Primo Esercizio di esempio su WHILE e DO WHILE - Simone Di Meglio <br />
 14/11/22  ---> Caricato Primo Esercizio di esempio su Array - Simone Di Meglio <br />
 15/11/22  ---> Caricato Esercizio su Array e Cicli (Menu Selezione con Scanner) - Simone Di Meglio <br />
+15/11/22  ---> Caricato Primo esercizio "Totale" in Java - Simone Di Meglio <br />
