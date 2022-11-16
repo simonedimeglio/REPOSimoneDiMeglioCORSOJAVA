@@ -11,3 +11,4 @@ REPOSimoneDiMeglioCORSOJAVA
 14/11/22  ---> Caricato Primo Esercizio di esempio su Array - Simone Di Meglio <br />
 15/11/22  ---> Caricato Esercizio su Array e Cicli (Menu Selezione con Scanner) - Simone Di Meglio <br />
 15/11/22  ---> Caricato Primo esercizio "Totale" in Java - Simone Di Meglio <br />
+16/11/22  ---> Caricata Prima parte nuovo esercizio "Totale" in Java - Simone Di Meglio <br />
