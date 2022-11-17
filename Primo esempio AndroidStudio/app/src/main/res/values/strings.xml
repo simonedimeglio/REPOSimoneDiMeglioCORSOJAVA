@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">testtest</string>
+    <string name="saluto">Ciao a Tutti!</string>
+    <string name="image_description">Image Description</string>
+    <string name="press">Premi</string>
+    <string name="name">Nome</string>
+</resources>
