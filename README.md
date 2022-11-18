@@ -13,3 +13,4 @@ REPOSimoneDiMeglioCORSOJAVA
 15/11/22  ---> Caricato Primo esercizio "Totale" in Java - Simone Di Meglio <br />
 16/11/22  ---> Caricata Prima parte nuovo esercizio "Totale" in Java - Simone Di Meglio <br />
 17/11/22  ---> Caricato Primo approccio Android Studio fatto in classe - Simone Di Meglio <br />
+18/11/22  ---> Caricato Primo esercizio completo in Kotlin "Quizone" NB: Commenti da aggiungere - Simone Di Meglio <br />
