@@ -10,24 +10,39 @@
 *
 * */
 
+
+// Simone Di Meglio
+// Corso Vianova - Experis
+// Android App Developer
+//
+//
+// CODE DOCUMENTATION:
+// Riga 31 - Costanti
+// Riga 37 - Variabili
+// Riga 48 - Array
+// Riga 80 - Start
+// Riga 229 - End
+// Fun Main - riga 27 / riga 231
+
 fun main(args: Array<String>) {
 
 
-    // Inizializzo variabili
-    val admin = "admin"
-    val adminPass = "adminPass"
-    val user = "user"
-    val userPass = "userPass"
+    // COSTANTI
+    val admin = "admin"             // Username per admin
+    val adminPass = "adminPass"     // Password per admin
+    val user = "user"               // Username per user
+    val userPass = "userPass"       // Password per user
 
-    var choice : Int
-    var readUserUsername : String // valorizzo in seguito
-    var readUserPassword : String // valorizzo in seguito
-    var readAdminUsername : String // valorizzo in seguito
-    var readAdminPassword : String // valorizzo in seguito
-    var check = false
-    var end = false
-    var menuSelector = ""
-    var results = 0
+    // VARIABILI
+    var choice : Int                // Inizializzo variabile per la scelta in input (assegno in seguito)
+    var readUserUsername : String   // Inizializzo variabile per la lettura dell'username per user in input (assegno in seguito)
+    var readUserPassword : String   // Inizializzo variabile per la lettura della password per user (assegno in seguito)
+    var readAdminUsername : String  // Inizializzo variabile per la lettura dell'username per admin in input (assegno in seguito)
+    var readAdminPassword : String  // Inizializzo variabile per la lettura dell'username per admin in input (assegno in seguito)
+    var check = false               // Controller
+    var end = false                 // Controller
+    var menuSelector = ""           // Inizializzo variabile per la lettura della scelta in menu in input (assegno in seguito)
+    var results = 0                 // Inizializzo contatore per il punteggio
 
     // ARRAY DELLE DOMANDE
     var questionArrayList = ArrayList<String>()
@@ -42,10 +57,8 @@ fun main(args: Array<String>) {
     answerArrayList.add("A) BIANCO - B) MARRONE - C) NERO")
     // 2)
     answerArrayList.add("A) QUA - B) PIERINO - C) QUO")
-
     // 3)
     answerArrayList.add("A) SPLASH - B) BOOM - C) CRACK")
-
     // 4)
     answerArrayList.add("A) BELLO - B) BELLISSIMO - C) SUPER")
 
@@ -63,15 +76,16 @@ fun main(args: Array<String>) {
 
 
 
+    // START
+    println("Benvenuto al quiz!")       // Messaggio di benvenuto
 
-    println("Benvenuto al quiz!")
-
-    do {
+    do {                                // Inizio ciclo DO-WHILE
         println("PRESS 1: USER")
         println("PRESS 2: ADMIN")
-        // Richiedo all'utente se è 1 o 2
-        choice = readLine()!!.toInt()
+        // Richiedo all'utente se è 1 (User) o 2 (Admin)
+        choice = readLine()!!.toInt()   // ReadLine per input
 
+        // Se User
         if(choice == 1) {
             println("------------")
             println("Login User")
@@ -80,7 +94,7 @@ fun main(args: Array<String>) {
             println("PASSWORD:")
             readUserPassword = readLine()!!.toString()
 
-            // Check della correttezza dei dati
+            // Check per correttezza dei dati
             if ( readUserUsername == user && readUserPassword == userPass ) {
                 println("------------")
                 println("Login Utente Effettuato - accesso consentito")
@@ -93,6 +107,7 @@ fun main(args: Array<String>) {
                 println("------------")
             }
 
+        // Se Admin
         } else if (choice == 2 ) {
             println("------------")
             println("Login Admin")
@@ -101,7 +116,7 @@ fun main(args: Array<String>) {
             println("PASSWORD:")
             readAdminPassword = readLine()!!.toString()
 
-            // Check della correttezza dei dati
+            // Check per correttezza dei dati
             if ( readAdminUsername == admin && readAdminPassword == adminPass ) {
                 println("------------")
                 println("Login Admin Effettuato - accesso consentito")
@@ -114,10 +129,10 @@ fun main(args: Array<String>) {
                 println("------------")
             }
         }
-    } while (check == false)
+    } while (check == false) // Rimango nel ciclo DO-WHILE fino a che non avviene l'accesso
 
 
-    // PROGRAMMA "ON"
+    // Ad accesso avvenuto
     do {
         // ACCESSO DIVERSIFICATO AI MENU
         // Menu Admin
@@ -130,7 +145,7 @@ fun main(args: Array<String>) {
 
             choice = readLine()!!.toInt()
 
-            if (choice.equals(1)) { // Aggiungo le domande
+            if (choice.equals(1)) { // Aggiungo domanda, risposta e risposta corretta
                 println("Inserisci una nuova domanda")
                 var newQuestion = readLine()!!.toString()
                 questionArrayList.add(newQuestion)
@@ -140,27 +155,32 @@ fun main(args: Array<String>) {
                 println("Inserisci la lettera corrispondende alla risposta corretta")
                 var newCorrectAnswer = readLine()!!.toString()
                 correctAnswerArrayList.add(newCorrectAnswer)
+                // -----------------------------------------------
             } else if (choice.equals(2)) { // Rimuovo le domande
                 println("Quale domanda vuoi eliminare? da 1 a ${questionArrayList.size}")
                 var deleteInt = readLine()!!.toInt()
                 var deleteString = readLine()!!.toString()
+                // Se la domanda non esiste segnalo l'errore
                 if (deleteInt > questionArrayList.size || deleteInt < 0) {
                     println("Errore - la domanda non esiste")
+                // Altrimenti la rimuovo
                 } else {
                     questionArrayList.remove(deleteString)
                 }
-
+                // -----------------------------------------------
             } else if (choice.equals(3)) { // Visualizzo le domande
                 var questionArraySize = questionArrayList.size
                 for (i in 0 until questionArraySize) {
                     println(questionArrayList.get(i))
                 }
                 println("-------")
+                // -----------------------------------------------
             } else if (choice.equals(4)) { // Esco
                 end = true
-            } else { // Errore
+            } else { // Se l'admin non sceglie correttamente una opzione possibile, segnalo l'errore
                 println("Errore: Seleziona 1 - 2 - 3 - 4 (Altre selezioni non consentite)")
             }
+
 
         // Menu User
         } else {
@@ -173,24 +193,28 @@ fun main(args: Array<String>) {
 
             if (choice.equals(1)) { // Inizio il quiz
                 println("------")
-                var questionArraySize = questionArrayList.size
-                var answerArraySize = answerArrayList.size
+                var questionArraySize = questionArrayList.size  // Calcolo dimensione array delle domande
+                var answerArraySize = answerArrayList.size      // Calcolo dimensione array delle risposte
 
-                for (i in 0 until questionArraySize) {
+
+                for (i in 0 until questionArraySize) {    // Ciclo per risposte
                     println(questionArrayList.get(i))
                     println(answerArrayList.get(i))
                     var answerChoice = readLine()!!.toString()
 
+                    // Se risposta corretta
                     if (answerChoice.equals(correctAnswerArrayList.get(i))) {
                         println("Risposta corretta")
                         println("------")
                         results++
+                    // Se risposta errata
                     } else {
                         println("Risposta errata")
                         println("------")
                     }
                 }
 
+                // Stampa del punteggio
                 println("PUNTEGGIO TOTALE: ${results}")
                 println("------")
                 end = true // esco dal quiz
@@ -203,13 +227,5 @@ fun main(args: Array<String>) {
                 println("Errore: Selezionare 1 (INIZIA QUIZ) o 2 (ESCI)")
             }
         }
-
     } while (end == false)
-
-}
-
-// Utilities Function
-
-fun user(args: Array<String>) {
-
 }
